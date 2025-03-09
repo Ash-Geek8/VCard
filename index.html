@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV to vCard Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSV to vCard Generator</h1>
+        <p>Upload a CSV file with ID, Full Name, and Phone Number.</p>
+        
+        <input type="file" id="csvFile" accept=".csv">
+        
+        <label for="startingIndex">Starting Index (if ID column is missing):</label>
+        <input type="number" id="startingIndex" placeholder="Enter starting index">
+
+        <label for="moderateIds">Moderate Case IDs (comma-separated):</label>
+        <input type="text" id="moderateIds" placeholder="e.g. 14, 64, 66">
+        
+        <label for="mildIds">Mild Case IDs (comma-separated):</label>
+        <input type="text" id="mildIds" placeholder="e.g. 42, 51">
+
+        <button onclick="processCSV()">Convert & Generate vCard</button>
+        
+        <a id="downloadLink" class="download-btn" style="display: none;" download="contacts.vcf">Download vCard</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
